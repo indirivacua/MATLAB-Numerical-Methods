@@ -40,14 +40,6 @@ function I = CuadraturaGauss(f,a,b,n)
             fprintf('No puede hacer nada con tu entrada\n')
             return
     end
-    %{
-syms x t
-if (a ~= -1) && (b ~= 1)
-        f=subs(f, x, ((b-a)*t)/2+(b-a)/2)
-end
-pesos(1,:)
-puntos(1,:)
-    %}
     I=0.0;
     for i=1:n
         t=((b-a)*puntos(1,i))/2+(b-a)/2;
